@@ -57,6 +57,7 @@ const state = {
     }
   ],
   products: [
+    // Skincare products
     {
       id: 'p-101',
       name: 'Glow Serum',
@@ -64,7 +65,8 @@ const state = {
       price: 89,
       commissionRate: 0.18,
       stock: 25,
-      image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80'
+      image: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80',
+      description: 'Vitamin C serum for radiant skin'
     },
     {
       id: 'p-102',
@@ -73,25 +75,204 @@ const state = {
       price: 120,
       commissionRate: 0.2,
       stock: 30,
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80'
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Deep moisturizing face cream'
     },
     {
       id: 'p-103',
-      name: 'Body Renewal Oil',
-      category: 'Wellness',
-      price: 95,
-      commissionRate: 0.17,
-      stock: 18,
-      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80'
+      name: 'Anti-Aging Night Mask',
+      category: 'Skincare',
+      price: 105,
+      commissionRate: 0.19,
+      stock: 28,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Overnight renewal mask with retinol'
     },
     {
       id: 'p-104',
-      name: 'Energy Pack',
-      category: 'Nutrition',
-      price: 140,
-      commissionRate: 0.22,
-      stock: 22,
-      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80'
+      name: 'Exfoliating Scrub',
+      category: 'Skincare',
+      price: 45,
+      commissionRate: 0.17,
+      stock: 40,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Gentle body and face exfoliator'
+    },
+
+    // Home Use Products
+    {
+      id: 'p-201',
+      name: 'Aromatherapy Diffuser',
+      category: 'Home Use',
+      price: 75,
+      commissionRate: 0.16,
+      stock: 20,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Ultrasonic humidifier with essential oil diffusion'
+    },
+    {
+      id: 'p-202',
+      name: 'Premium Essential Oil Kit',
+      category: 'Home Use',
+      price: 110,
+      commissionRate: 0.18,
+      stock: 35,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Set of 12 pure essential oils for home aromatherapy'
+    },
+    {
+      id: 'p-203',
+      name: 'Organic Laundry Detergent',
+      category: 'Home Use',
+      price: 35,
+      commissionRate: 0.15,
+      stock: 50,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Eco-friendly laundry soap with natural ingredients'
+    },
+    {
+      id: 'p-204',
+      name: 'Bamboo Cleaning Brush Set',
+      category: 'Home Use',
+      price: 28,
+      commissionRate: 0.14,
+      stock: 60,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Sustainable bamboo brushes for kitchen and bath'
+    },
+    {
+      id: 'p-205',
+      name: 'Natural Air Purifier Spray',
+      category: 'Home Use',
+      price: 32,
+      commissionRate: 0.16,
+      stock: 55,
+      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80',
+      description: 'Chemical-free air freshener with botanical extracts'
+    },
+
+    // Supplements
+    {
+      id: 'p-301',
+      name: 'Multivitamin Complex',
+      category: 'Supplements',
+      price: 65,
+      commissionRate: 0.19,
+      stock: 45,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Daily essential vitamins and minerals'
+    },
+    {
+      id: 'p-302',
+      name: 'Omega-3 Fish Oil',
+      category: 'Supplements',
+      price: 55,
+      commissionRate: 0.18,
+      stock: 38,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Premium marine source omega-3 supplement'
+    },
+    {
+      id: 'p-303',
+      name: 'Collagen Beauty Powder',
+      category: 'Supplements',
+      price: 78,
+      commissionRate: 0.2,
+      stock: 32,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Hydrolyzed collagen for skin, hair, and nails'
+    },
+    {
+      id: 'p-304',
+      name: 'Vitamin D3 Plus K2',
+      category: 'Supplements',
+      price: 48,
+      commissionRate: 0.17,
+      stock: 50,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Bone health support supplement'
+    },
+    {
+      id: 'p-305',
+      name: 'Probiotics Digestive Blend',
+      category: 'Supplements',
+      price: 62,
+      commissionRate: 0.19,
+      stock: 40,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Multi-strain probiotic for gut health'
+    },
+    {
+      id: 'p-306',
+      name: 'Energy & Stamina Capsules',
+      category: 'Supplements',
+      price: 54,
+      commissionRate: 0.18,
+      stock: 36,
+      image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80',
+      description: 'Ginseng and caffeine-free energy boost'
+    },
+
+    // Teas
+    {
+      id: 'p-401',
+      name: 'Organic Green Tea Collection',
+      category: 'Teas',
+      price: 42,
+      commissionRate: 0.16,
+      stock: 44,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Premium loose leaf green tea blend'
+    },
+    {
+      id: 'p-402',
+      name: 'Herbal Detox Tea',
+      category: 'Teas',
+      price: 35,
+      commissionRate: 0.15,
+      stock: 52,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Cleansing blend with turmeric and ginger'
+    },
+    {
+      id: 'p-403',
+      name: 'Sleep & Relaxation Tea',
+      category: 'Teas',
+      price: 38,
+      commissionRate: 0.15,
+      stock: 48,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Chamomile and lavender blend for restful sleep'
+    },
+    {
+      id: 'p-404',
+      name: 'Weight Management Tea',
+      category: 'Teas',
+      price: 48,
+      commissionRate: 0.17,
+      stock: 40,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Metabolism-boosting tea with natural ingredients'
+    },
+    {
+      id: 'p-405',
+      name: 'Immune Boost Tea',
+      category: 'Teas',
+      price: 45,
+      commissionRate: 0.17,
+      stock: 46,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Elderberry and echinacea immune support'
+    },
+    {
+      id: 'p-406',
+      name: 'Premium Oolong Tea',
+      category: 'Teas',
+      price: 55,
+      commissionRate: 0.18,
+      stock: 38,
+      image: 'https://images.unsplash.com/photo-1597318013620-42b81319d4b9?auto=format&fit=crop&w=900&q=80',
+      description: 'Traditional oolong with antioxidants'
     }
   ],
   orders: [],
@@ -142,12 +323,29 @@ const buildDashboard = () => {
   const totalCommissions = state.commissions.reduce((sum, bonus) => sum + bonus.amount, 0);
   const totalDistributors = state.distributors.length;
 
+  const categorySales = {};
+  state.products.forEach((product) => {
+    if (!categorySales[product.category]) {
+      categorySales[product.category] = 0;
+    }
+  });
+
+  state.orders.forEach((order) => {
+    order.items.forEach((item) => {
+      const product = state.products.find((p) => p.id === item.productId);
+      if (product && categorySales[product.category] !== undefined) {
+        categorySales[product.category] += item.lineTotal;
+      }
+    });
+  });
+
   return {
     totalSales,
     totalCommissions,
     totalDistributors,
     pendingPayouts: state.distributors.reduce((sum, distributor) => sum + distributor.wallet, 0),
-    topProduct: state.products[0]
+    topProduct: state.products[0],
+    categorySales
   };
 };
 
@@ -179,7 +377,27 @@ app.get('/api/health', (req, res) => {
 });
 
 app.get('/api/products', (req, res) => {
-  res.json({ products: state.products });
+  const category = req.query.category;
+  let filteredProducts = state.products;
+
+  if (category) {
+    filteredProducts = state.products.filter((product) => product.category === category);
+  }
+
+  res.json({ products: filteredProducts });
+});
+
+app.get('/api/products/categories', (req, res) => {
+  const categories = [...new Set(state.products.map((product) => product.category))];
+  res.json({ categories });
+});
+
+app.get('/api/products/:id', (req, res) => {
+  const product = state.products.find((p) => p.id === req.params.id);
+  if (!product) {
+    return res.status(404).json({ message: 'Product not found' });
+  }
+  res.json({ product });
 });
 
 app.get('/api/dashboard', (req, res) => {
@@ -281,6 +499,7 @@ app.post('/api/orders', (req, res) => {
     return {
       productId: product.id,
       productName: product.name,
+      category: product.category,
       quantity,
       unitPrice: product.price,
       lineTotal
