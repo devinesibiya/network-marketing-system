@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wellness Hub - Premium Skincare, Home Care, Supplements & Teas</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-badge">WH</div>
+      <div>
+        <h1>Wellness Hub</h1>
+        <p>Premium wellness marketplace</p>
+      </div>
+    </div>
+    <nav class="topbar-nav">
+      <a href="/storefront.html" class="nav-link active">Shop</a>
+      <a href="#join" class="nav-link cta-btn">Join as Distributor</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Transform Your Wellness Journey</h2>
+        <p>Discover premium skincare, home care, supplements, and herbal teas crafted for your health and happiness.</p>
+        <button class="hero-btn" onclick="document.getElementById('shop').scrollIntoView();">Shop Now</button>
+      </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section id="shop" class="shop-section">
+      <div class="container">
+        <h2>Our Collections</h2>
+        <div class="category-filter">
+          <button class="filter-btn active" data-category="all">All Products</button>
+          <button class="filter-btn" data-category="Skincare">Skincare</button>
+          <button class="filter-btn" data-category="Home Use">Home Care</button>
+          <button class="filter-btn" data-category="Supplements">Supplements</button>
+          <button class="filter-btn" data-category="Teas">Teas</button>
+        </div>
+
+        <div id="productsGrid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Why Join Section -->
+    <section class="why-join">
+      <div class="container">
+        <h2>Why Join Wellness Hub?</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">💰</div>
+            <h3>Generous Commissions</h3>
+            <p>Earn 15-20% on retail sales plus team bonuses up to 5%</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🌟</div>
+            <h3>Rank & Rewards</h3>
+            <p>Progress through ranks: Starter, Bronze, Silver, Gold, Platinum</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">👥</div>
+            <h3>Build Your Team</h3>
+            <p>Sponsor distributors and earn leadership bonuses on their sales</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🏆</div>
+            <h3>Monthly Bonuses</h3>
+            <p>Rank bonuses, autoship rewards, and exclusive incentives</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enrollment CTA -->
+    <section class="enrollment-cta">
+      <div class="container">
+        <h2>Ready to Start Your Wellness Business?</h2>
+        <p>Join thousands of distributors earning passive income while sharing wellness</p>
+        <button class="primary-btn-lg" onclick="document.getElementById('enrollForm').scrollIntoView();">Enroll Now</button>
+      </div>
+    </section>
+
+    <!-- Enrollment Form -->
+    <section id="enrollForm" class="enrollment-form-section">
+      <div class="container">
+        <div class="form-wrapper">
+          <h2>Become a Wellness Hub Distributor</h2>
+          <form id="enrollmentForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input id="fname" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input id="lname" type="text" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="enroll-email">Email</label>
+              <input id="enroll-email" type="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="sponsor-code">Sponsor Code (optional)</label>
+              <input id="sponsor-code" type="text" placeholder="Ask your sponsor for their code" />
+            </div>
+
+            <button type="submit" class="primary-btn-lg">Create Your Account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Wellness Hub. All rights reserved.</p>
+      <p>Promoting health and financial wellness through ethical direct selling.</p>
+    </div>
+  </footer>
+
+  <script src="/storefront.js"></script>
+</body>
+</html>

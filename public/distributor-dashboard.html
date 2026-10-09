@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Distributor Dashboard - Wellness Hub</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-badge">WH</div>
+      <div>
+        <h1>Wellness Hub Dashboard</h1>
+        <p>Distributor Control Panel</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Distributor Info -->
+    <section class="info-card">
+      <h2>Your Profile</h2>
+      <div class="distributor-info" id="distributorInfo"></div>
+    </section>
+
+    <!-- Stats Grid -->
+    <section class="stats-grid" id="statsGrid"></section>
+
+    <!-- Quick Actions -->
+    <section class="panel-grid">
+      <div class="panel">
+        <h2>Invite Sponsor</h2>
+        <p>Share your referral code with friends and family</p>
+        <input id="refCode" type="text" readonly style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px;" />
+        <button class="primary-btn" onclick="copyToClipboard()">Copy Code</button>
+      </div>
+
+      <div class="panel">
+        <h2>Place Order</h2>
+        <form id="orderForm">
+          <select id="productId" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px;"></select>
+          <input id="quantity" type="number" min="1" value="1" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px;" />
+          <button type="submit" class="primary-btn">Place Order</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Genealogy Tree -->
+    <section class="panel">
+      <h2>Your Team (Downline)</h2>
+      <div id="treeView" class="tree-view"></div>
+    </section>
+
+    <!-- Commissions History -->
+    <section class="panel">
+      <h2>Commission History</h2>
+      <div id="commissionsTable" class="commissions-table"></div>
+    </section>
+  </main>
+
+  <script src="/distributor-dashboard.js"></script>
+</body>
+</html>

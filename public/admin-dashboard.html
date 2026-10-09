@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Wellness Hub</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="brand-badge">WH</div>
+      <div>
+        <h1>Admin Panel</h1>
+        <p>Wellness Hub Management</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <!-- Overview Stats -->
+    <section class="stats-grid" id="overviewStats"></section>
+
+    <!-- Tabs -->
+    <section class="admin-tabs">
+      <button class="tab-btn active" data-tab="distributors">Distributors</button>
+      <button class="tab-btn" data-tab="products">Products</button>
+      <button class="tab-btn" data-tab="orders">Orders</button>
+      <button class="tab-btn" data-tab="commissions">Commissions</button>
+    </section>
+
+    <!-- Distributors Tab -->
+    <section id="distributors-tab" class="tab-content active">
+      <div class="panel">
+        <h2>Distributor Management</h2>
+        <div id="distributorsList" class="admin-table"></div>
+      </div>
+    </section>
+
+    <!-- Products Tab -->
+    <section id="products-tab" class="tab-content">
+      <div class="panel">
+        <h2>Product Catalog</h2>
+        <div id="productsList" class="products-grid"></div>
+      </div>
+    </section>
+
+    <!-- Orders Tab -->
+    <section id="orders-tab" class="tab-content">
+      <div class="panel">
+        <h2>Recent Orders</h2>
+        <div id="ordersList" class="admin-table"></div>
+      </div>
+    </section>
+
+    <!-- Commissions Tab -->
+    <section id="commissions-tab" class="tab-content">
+      <div class="panel">
+        <h2>Commission Summary</h2>
+        <div id="commissionsList" class="admin-table"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin-dashboard.js"></script>
+</body>
+</html>

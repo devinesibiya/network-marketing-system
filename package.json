@@ -1,7 +1,7 @@
 {
-  "name": "network-marketing-system",
-  "version": "1.0.0",
-  "description": "Starter code for a network marketing / MLM platform with products, downlines, commissions, and dashboard.",
+  "name": "wellness-mlm-system",
+  "version": "2.0.0",
+  "description": "Complete wellness MLM platform with skincare, home care, supplements, and teas",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
