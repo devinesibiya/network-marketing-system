@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLM Starter Platform</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-badge">ML</div>
+        <div>
+          <h1>MLM Starter</h1>
+          <p>Distributor & sales dashboard</p>
+        </div>
+      </div>
+      <button id="refreshBtn" class="primary-btn">Refresh data</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="stats-grid" id="statsGrid"></section>
+
+      <section class="panel-grid">
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Register distributor</h2>
+          </div>
+
+          <form id="registerForm">
+            <div class="field-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="jane@email.com" required />
+            </div>
+
+            <div class="field-group">
+              <label for="sponsorCode">Sponsor code</label>
+              <input id="sponsorCode" name="sponsorCode" type="text" placeholder="AVA1001" />
+            </div>
+
+            <button type="submit" class="primary-btn">Create distributor</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Place sample order</h2>
+          </div>
+
+          <form id="orderForm">
+            <div class="field-group">
+              <label for="distributorId">Distributor ID</label>
+              <select id="distributorId" name="distributorId"></select>
+            </div>
+
+            <div class="field-group">
+              <label for="productId">Product</label>
+              <select id="productId" name="productId"></select>
+            </div>
+
+            <div class="field-group">
+              <label for="quantity">Quantity</label>
+              <input id="quantity" name="quantity" type="number" min="1" value="1" />
+            </div>
+
+            <button type="submit" class="primary-btn">Submit order</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Products catalog</h2>
+        </div>
+        <div id="productsGrid" class="products-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Distributor leaderboard</h2>
+        </div>
+        <div id="leaderboardList" class="leaderboard-list"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "network-marketing-system",
+  "version": "1.0.0",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "dist",
+    ".env",
+    "npm-debug.log*"
+  ]
+}
